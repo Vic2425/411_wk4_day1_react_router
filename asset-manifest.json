@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/411.github.io/411_wk4_day1_react_router/static/css/main.a29c43ac.css",
+    "main.js": "/411.github.io/411_wk4_day1_react_router/static/js/main.c00c6bf1.js",
+    "index.html": "/411.github.io/411_wk4_day1_react_router/index.html",
+    "main.a29c43ac.css.map": "/411.github.io/411_wk4_day1_react_router/static/css/main.a29c43ac.css.map",
+    "main.c00c6bf1.js.map": "/411.github.io/411_wk4_day1_react_router/static/js/main.c00c6bf1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a29c43ac.css",
+    "static/js/main.c00c6bf1.js"
+  ]
+}
