@@ -7,26 +7,23 @@ import { useParams } from "react-router-dom";
 import { Container, Paper, Chip } from "@mui/material";
 
 const Car = (props) => {
-  const carId = useParams().carId;
-  let car = cars.find((car) => car.id === Number(carId));
+  const carId = useParams();
+  console.log("id", carId);
+  let car = cars.find((car) => car.id == carId.id);
+  console.log("car", car);
 
   return (
     <Container maxWidth="sm" className="car-container">
       <Paper className="car-paper">
-        <h2>{car.Name}</h2>
-        {Object.keys(car).map((key, index) => {
-          return <Chip key={index} label={`${key}: ${car[key]}`}></Chip>;
+        <h2>{car.Name.toUpperCase()}</h2>
+        {Object.keys(car).map((key, idx) => {
+          return (
+            <Chip
+              label={`${key}: ${car[key]}`}
+              sx={{ textTransform: "capitalize" }}
+            />
+          );
         })}
-        {/* {<Chip label={`${car.id}`} />
-          <Chip label={Name: `${car.Name}`} />
-          <Chip label={Miles_per_Gallon: {car["Miles_per_Gallon"]}} />
-          <Chip label={Cylinders: {car["Cylinders"]}} />
-          <Chip label={Displacement: {car["Displacement"]}} />
-          <Chip label={Horsepower: {car["Horsepower"]}} />
-          <Chip label={Weight_in_lbs: {car["Weight_in_lbs"]}} />
-          <Chip label={Acceleration: {car["Acceleration"]}} />
-          <Chip label={Year: {car["Year"]}} />
-          <Chip label={Origin: {car["Origin"]}} /> */}
       </Paper>
     </Container>
   );
